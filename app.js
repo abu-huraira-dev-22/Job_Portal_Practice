@@ -43,4 +43,5 @@ document.querySelector("#signupBtn").addEventListener("click",function(){
     }
     allUsers.push(userDetails)
     localStorage.setItem("allUsers",JSON.stringify(allUsers))
+    window.location = 'login.html'
 })
