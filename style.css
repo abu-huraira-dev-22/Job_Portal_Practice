@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+}
+#signup, #login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup input , #login input{
+    margin: 5px;
+    padding: 2 5px;
+}
