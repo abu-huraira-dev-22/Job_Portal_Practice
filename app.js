@@ -17,6 +17,22 @@ document.querySelector("#signupBtn").addEventListener("click",function(){
     if(password.value.length<8){
         return alert("password should be 8 characters long")
     }
+
+    const userNameAlreadyExists = allUsers.find(function(userData){
+        return userData.userName.toLowerCase() == userName.value.toLowerCase()
+    })
+    const userEmailAlreadyExists = allUsers.find(function(userData){
+        return userData.email.toLowerCase() == email.value.toLowerCase()
+    })
+
+
+    if(userNameAlreadyExists){
+        return alert("Username is already taken, try another")
+    }
+    if(userEmailAlreadyExists){
+        return alert("Email address is already exist, try to login")
+    }
+
     const userDetails={
         userName : userName.value,
         firstName: firstName.value,
