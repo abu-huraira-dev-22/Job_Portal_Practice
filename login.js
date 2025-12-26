@@ -17,7 +17,8 @@ document.querySelector('#loginBtn').addEventListener('click', function(){
     if(!isExists) return alert('Please create your account first')
     if(isExists.password == passwordLogin.value){
         alert('Congratulations, we are signing you up')
-        window.location = 'jobs_page.html'
+        localStorage.setItem("loggedInUser", JSON.stringify(isExists))
+        window.location = 'dashboard.html'
     }
     else{
         alert('Incorrect password')
